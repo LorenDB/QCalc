@@ -96,7 +96,7 @@ void StandardDistribution::calculateSum()
 
 void StandardDistribution::calculateMean()
 {
-    double accumulator;
+    double accumulator = 0;
     for (auto x : m_dataSet)
         accumulator += x;
     m_mean = accumulator / m_dataSet.length();
