@@ -23,7 +23,6 @@ Window {
             edge: Qt.LeftEdge
             height: rootItem.height
             width: rootItem.width * 0.5
-            interactive: true
 
             ColumnLayout {
                 anchors.fill: parent
