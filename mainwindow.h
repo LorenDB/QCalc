@@ -11,7 +11,7 @@ class MainWindow : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString license READ license)
+    Q_PROPERTY(QString license READ license CONSTANT)
 
 public:
     explicit MainWindow(QObject *parent = nullptr);
