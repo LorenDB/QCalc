@@ -56,6 +56,7 @@ Window {
             id: stack
 
             anchors.fill: parent
+            anchors.margins: 10
             currentIndex: 0
 
             ColumnLayout {
