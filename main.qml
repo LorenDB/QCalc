@@ -12,82 +12,76 @@ Window {
     height: 480
     title: qsTr("QStatistics")
 
-    Item {
-        id: rootItem
+    Drawer {
+        id: drawer
+
+        edge: Qt.LeftEdge
+        height: window.height
+        width: window.width * 0.5
+
+        ColumnLayout {
+            anchors.fill: parent
+
+            Button {
+                text: qsTr("Standard distribution")
+                Layout.fillWidth: true
+                onClicked: {
+                    stack.currentIndex = 0;
+                    drawer.close();
+                }
+            }
+
+            Button {
+                text: qsTr("License")
+                Layout.fillWidth: true
+                onClicked: {
+                    stack.currentIndex = 1;
+                    drawer.close();
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+            }
+        }
+    }
+
+    StackLayout {
+        id: stack
 
         anchors.fill: parent
+        anchors.margins: 10
+        currentIndex: 0
 
-        Drawer {
-            id: drawer
+        ColumnLayout {
+            id: standardDistributionLayout
 
-            edge: Qt.LeftEdge
-            height: rootItem.height
-            width: rootItem.width * 0.5
+            spacing: 10
+            anchors.margins: 10
 
-            ColumnLayout {
-                anchors.fill: parent
+            StandardDistributionInput {
+                Layout.fillWidth: true
+            }
 
-                Button {
-                    text: qsTr("Standard distribution")
-                    Layout.fillWidth: true
-                    onClicked: {
-                        stack.currentIndex = 0;
-                        drawer.close();
-                    }
-                }
+            StandardDistributionInfo {
+                Layout.fillWidth: true
+            }
 
-                Button {
-                    text: qsTr("License")
-                    Layout.fillWidth: true
-                    onClicked: {
-                        stack.currentIndex = 1;
-                        drawer.close();
-                    }
-                }
-
-                Item {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
+            // use the rest of the space
+            Item {
+                Layout.fillHeight: true
+                Layout.fillWidth: true
             }
         }
 
-        StackLayout {
-            id: stack
+        // the license
+        ScrollView {
+            id: licenseView
 
-            anchors.fill: parent
-            anchors.margins: 10
-            currentIndex: 0
-
-            ColumnLayout {
-                id: standardDistributionLayout
-
-                spacing: 10
-                anchors.margins: 10
-
-                StandardDistributionInput {
-                    Layout.fillWidth: true
-                }
-
-                StandardDistributionInfo {
-                    Layout.fillWidth: true
-                }
-
-                // use the rest of the space
-                Item {
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-                }
-            }
-
-            // the license
-            ScrollView {
-                id: licenseView
-
-                Label {
-                    padding: 10
-                    text: QCalc.license
-                }
+            Label {
+                padding: 10
+                text: QCalc.license
             }
         }
     }

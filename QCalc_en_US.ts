@@ -108,12 +108,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.qml" line="31"/>
+        <location filename="main.qml" line="26"/>
         <source>Standard distribution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.qml" line="40"/>
+        <location filename="main.qml" line="35"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
