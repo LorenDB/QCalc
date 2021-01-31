@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>StandardDistributionInput.qml</file>
         <file>LICENSE</file>
+        <file>StandardDistributionInfo.qml</file>
     </qresource>
 </RCC>

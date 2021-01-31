@@ -4,6 +4,8 @@ import QtQuick.Layouts 1.12
 import QCalc 1.0
 
 RowLayout {
+    spacing: 10
+
     TextField {
         id: dataInput
 

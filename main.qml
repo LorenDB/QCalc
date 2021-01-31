@@ -59,9 +59,8 @@ Window {
             currentIndex: 0
 
             ColumnLayout {
-                id: rootLayout
+                id: standardDistributionLayout
 
-                anchors.fill: parent
                 spacing: 10
                 anchors.margins: 10
 
@@ -69,56 +68,8 @@ Window {
                     Layout.fillWidth: true
                 }
 
-                Label {
-                    text: qsTr("Sorted data: ") + StandardDistribution.dataSet
-                }
-
-                Label {
-                    text: qsTr("Number of data points: ") + StandardDistribution.numDataPoints
-                }
-
-                Label {
-                    text: qsTr("Range: ") + StandardDistribution.range
-                }
-
-                Label {
-                    text: qsTr("Sum: ") + StandardDistribution.sum
-                }
-
-                Label {
-                    text: qsTr("Sum of squares: ") + StandardDistribution.sumSquares
-                }
-
-                Label {
-                    text: qsTr("Mean: ") + StandardDistribution.mean
-                }
-
-                Label {
-                    text: qsTr("Q1: ") + StandardDistribution.q1
-                }
-
-                Label {
-                    text: qsTr("Median: ") + StandardDistribution.median
-                }
-
-                Label {
-                    text: qsTr("Q3: ") + StandardDistribution.q3
-                }
-
-                Label {
-                    text: qsTr("Outliers: ") + StandardDistribution.outliers
-                }
-
-                Label {
-                    text: qsTr("Mode: ") + StandardDistribution.mode
-                }
-
-                Label {
-                    text: qsTr("Variance: ") + StandardDistribution.variance
-                }
-
-                Label {
-                    text: qsTr("Standard deviation: ") + StandardDistribution.standardDeviation
+                StandardDistributionInfo {
+                    Layout.fillWidth: true
                 }
 
                 // use the rest of the space
@@ -130,7 +81,7 @@ Window {
 
             // the license
             ScrollView {
-                anchors.fill: parent
+                id: licenseView
 
                 Label {
                     padding: 10
