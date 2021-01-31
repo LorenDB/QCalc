@@ -79,8 +79,9 @@ Window {
         ScrollView {
             id: licenseView
 
-            Label {
+            TextArea {
                 padding: 10
+                readOnly: true
                 text: QCalc.license
             }
         }
