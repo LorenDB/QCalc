@@ -103,17 +103,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="main.qml" line="14"/>
+        <location filename="main.qml" line="13"/>
         <source>QStatistics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.qml" line="43"/>
+        <location filename="main.qml" line="40"/>
         <source>Standard distribution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.qml" line="53"/>
+        <location filename="main.qml" line="50"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
