@@ -39,7 +39,7 @@ ApplicationWindow {
             Button {
                 text: qsTr("Standard distribution")
                 Layout.fillWidth: true
-                onClicked: { console.log(stack.currentItem);
+                onClicked: {
                     if (stack.currentItem != StandardDistributionPage)
                         stack.push(standardDistributionCalc);
                     drawer.close();
@@ -49,7 +49,7 @@ ApplicationWindow {
             Button {
                 text: qsTr("License")
                 Layout.fillWidth: true
-                onClicked: { console.log(stack.currentItem == license);
+                onClicked: {
                     if (stack.currentItem != license)
                         stack.push(license);
                     drawer.close();
