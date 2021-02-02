@@ -9,7 +9,7 @@ ApplicationWindow {
 
     visible: true
     width: 640
-    height: 480
+    height: 520
     title: qsTr("QStatistics")
 
     header: ToolBar {
