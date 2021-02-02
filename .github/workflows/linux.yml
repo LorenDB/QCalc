@@ -1,0 +1,23 @@
+name: Linux build
+on: push
+
+jobs:
+  linux:
+    name: Linux desktop
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2.9.0
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: ashutoshvarma/action-cmake-build@master
+        with:
+          build-dir: ${{ runner.workspace }}/build
+          # will set the CC & CXX for cmake
+          cc: gcc
+          cxx: g++
+          build-type: Release
