@@ -7,7 +7,7 @@ ScrollView {
 
     property string pageTitle: "GNU GPL version 3"
 
-    Text {
+    Label {
         text: QCalc.license
     }
 }
