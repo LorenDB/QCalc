@@ -1,11 +1,12 @@
-name: Linux builds
+name: Android builds
 on: push
 
 jobs:
-  linux:
+  android:
     strategy:
       matrix:
         qt_version: [5.15.2, 6.0.0]
+        arch: [android_x86, android_armv7]
         cxx: [g++, clang++]
         include:
           - cxx: g++
@@ -13,14 +14,17 @@ jobs:
           - cxx: clang++
             cc: clang
 
-    name: Linux desktop (Qt ${{ matrix.qt_version }}, ${{ matrix.cxx }})
+    name: Android (Qt ${{ matrix.qt_version }}, ${{ matrix.arch }}, ${{ matrix.cxx }})
     runs-on: ubuntu-latest
 
     steps:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2.9.0
         with:
-          version: 5.15.2
+          version: ${{ matrix.qt_version }}
+
+          target: android
+          arch: ${{ matrix.arch }}
 
       - name: Checkout code
         uses: actions/checkout@v2
