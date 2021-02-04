@@ -28,23 +28,36 @@ find_package(Qt5 COMPONENTS Core Quick QuickControls2 LinguistTools REQUIRED)
 
 set(TS_FILES QCalc_en_US.ts)
 
-if(ANDROID)
-    add_library(QCalc SHARED
+set(SRC
       StandardDistribution.cpp
       main.cpp
       mainwindow.cpp
       QStatistics.cpp
-      qml.qrc
-      ${TS_FILES}
+)
+
+set(QRC
+    qml.qrc
+)
+
+# make sure that Windows doesn't display a console
+if(WIN32)
+    set(IS_WIN "WIN32")
+else()
+    set(IS_WIN "")
+endif()
+
+if(ANDROID)
+    add_library(QCalc SHARED
+        ${SRC}
+        ${QRC}
+        ${TS_FILES}
     )
 else()
     add_executable(QCalc
-      StandardDistribution.cpp
-      main.cpp
-      mainwindow.cpp
-      QStatistics.cpp
-      qml.qrc
-      ${TS_FILES}
+        ${IS_WIN}
+        ${SRC}
+        ${QRC}
+        ${TS_FILES}
     )
 endif()
 
