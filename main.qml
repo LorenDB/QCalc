@@ -10,7 +10,7 @@ ApplicationWindow {
     visible: true
     width: 640
     height: 520
-    title: qsTr("QStatistics")
+    title: qsTr("QCalc") + " | " + stack.currentItem.pageTitle
 
     header: ToolBar {
 
