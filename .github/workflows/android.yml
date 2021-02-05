@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         qt_version: [5.15.2, 6.0.0]
-        arch: [android_x86, android_armv7]
+        # arch: [android_x86, android_armv7]
         cxx: [g++, clang++]
         include:
           - cxx: g++
@@ -23,7 +23,7 @@ jobs:
         with:
           version: ${{ matrix.qt_version }}
           target: android
-          arch: ${{ matrix.arch }}
+          # arch: ${{ matrix.arch }}
           aqtversion: "==1.0.0"
 
       - name: Checkout code
