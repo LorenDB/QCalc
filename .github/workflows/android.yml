@@ -30,9 +30,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build
-        uses: ashutoshvarma/action-cmake-build@master
-        with:
-          build-dir: ${{ runner.workspace }}/build
-          cc: ${{ matrix.cc }}
-          cxx: ${{ matrix.cxx }}
-          build-type: Release
+        run: |
+          mkdir build && cd build
+          cmake ..
+          cmake --build .
