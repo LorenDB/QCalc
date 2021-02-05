@@ -5,7 +5,7 @@ jobs:
   android:
     strategy:
       matrix:
-        qt_version: [5.15.2, 6.0.0]
+        qt_version: [5.15.2]
         # arch: [android_x86, android_armv7]
         cxx: [g++, clang++]
         include:
