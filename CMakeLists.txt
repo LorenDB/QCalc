@@ -24,7 +24,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #    endif()
 #endif()
 
-find_package(Qt5 COMPONENTS Core Quick QuickControls2 LinguistTools REQUIRED)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Quick QuickControls2 LinguistTools REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Quick QuickControls2 LinguistTools REQUIRED)
+
+#find_package(Qt6 COMPONENTS Core Quick QuickControls2 LinguistTools)
+#if(NOT Qt6_FOUND)
+#    find_package(Qt5 COMPONENTS Core Quick QuickControls2 LinguistTools REQUIRED)
+#endif()
 
 set(TS_FILES QCalc_en_US.ts)
 
@@ -64,6 +70,10 @@ endif()
 target_compile_definitions(QCalc
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(QCalc
-  PRIVATE Qt5::Core Qt5::Quick Qt5::QuickControls2)
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::QuickControls2)
 
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+if (${QT_VERSION_MAJOR} STREQUAL "5")
+    qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+else()
+    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+endif()
