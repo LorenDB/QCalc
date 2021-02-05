@@ -1,0 +1,26 @@
+name: macOS builds
+on: push
+
+jobs:
+  macos:
+    strategy:
+      matrix:
+        qt_version: [5.15.2, 6.0.0]
+
+    name: macOS desktop (Qt ${{ matrix.qt_version }})
+    runs-on: macos-latest
+
+    steps:
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2.9.0
+        with:
+          version: ${{ matrix.qt_version }}
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          mkdir build && cd build
+          cmake ..
+          cmake --build .
