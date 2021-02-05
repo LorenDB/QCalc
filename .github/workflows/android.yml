@@ -22,9 +22,9 @@ jobs:
         uses: jurplel/install-qt-action@v2.9.0
         with:
           version: ${{ matrix.qt_version }}
-
           target: android
           arch: ${{ matrix.arch }}
+          aqtversion: "==1.0.0"
 
       - name: Checkout code
         uses: actions/checkout@v2
