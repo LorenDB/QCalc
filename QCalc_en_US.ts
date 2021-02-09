@@ -35,67 +35,67 @@
 <context>
     <name>StandardDistributionPage</name>
     <message>
-        <location filename="StandardDistributionPage.qml" line="27"/>
+        <location filename="StandardDistributionPage.qml" line="32"/>
         <source>Sorted data: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="31"/>
+        <location filename="StandardDistributionPage.qml" line="36"/>
         <source>Number of data points: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="35"/>
+        <location filename="StandardDistributionPage.qml" line="40"/>
         <source>Range: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="39"/>
+        <location filename="StandardDistributionPage.qml" line="44"/>
         <source>Sum: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="43"/>
+        <location filename="StandardDistributionPage.qml" line="48"/>
         <source>Sum of squares: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="47"/>
+        <location filename="StandardDistributionPage.qml" line="52"/>
         <source>Mean: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="51"/>
+        <location filename="StandardDistributionPage.qml" line="56"/>
         <source>Q1: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="55"/>
+        <location filename="StandardDistributionPage.qml" line="60"/>
         <source>Median: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="59"/>
+        <location filename="StandardDistributionPage.qml" line="64"/>
         <source>Q3: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="63"/>
+        <location filename="StandardDistributionPage.qml" line="68"/>
         <source>Outliers: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="67"/>
+        <location filename="StandardDistributionPage.qml" line="72"/>
         <source>Mode: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="71"/>
+        <location filename="StandardDistributionPage.qml" line="76"/>
         <source>Variance: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="StandardDistributionPage.qml" line="75"/>
+        <location filename="StandardDistributionPage.qml" line="80"/>
         <source>Standard deviation: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -104,7 +104,7 @@
     <name>main</name>
     <message>
         <location filename="main.qml" line="13"/>
-        <source>QStatistics</source>
+        <source>QCalc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

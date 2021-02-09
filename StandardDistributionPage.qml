@@ -10,6 +10,11 @@ ColumnLayout {
 
     spacing: 10
 
+    function round(num, places) {
+        var powOfTen = Math.pow(10, places);
+        return Math.round(num * powOfTen) / powOfTen;
+    }
+
     StandardDistributionInput {
         Layout.fillWidth: true
     }
@@ -36,27 +41,27 @@ ColumnLayout {
             }
 
             Label {
-                text: qsTr("Sum: ") + StandardDistribution.sum
+                text: qsTr("Sum: ") + round(StandardDistribution.sum, 2)
             }
 
             Label {
-                text: qsTr("Sum of squares: ") + StandardDistribution.sumSquares
+                text: qsTr("Sum of squares: ") + round(StandardDistribution.sumSquares, 2)
             }
 
             Label {
-                text: qsTr("Mean: ") + StandardDistribution.mean
+                text: qsTr("Mean: ") + round(StandardDistribution.mean, 2)
             }
 
             Label {
-                text: qsTr("Q1: ") + StandardDistribution.q1
+                text: qsTr("Q1: ") + round(StandardDistribution.q1, 2)
             }
 
             Label {
-                text: qsTr("Median: ") + StandardDistribution.median
+                text: qsTr("Median: ") + round(StandardDistribution.median, 2)
             }
 
             Label {
-                text: qsTr("Q3: ") + StandardDistribution.q3
+                text: qsTr("Q3: ") + round(StandardDistribution.q3, 2)
             }
 
             Label {
@@ -68,11 +73,11 @@ ColumnLayout {
             }
 
             Label {
-                text: qsTr("Variance: ") + StandardDistribution.variance
+                text: qsTr("Variance: ") + round(StandardDistribution.variance, 2)
             }
 
             Label {
-                text: qsTr("Standard deviation: ") + StandardDistribution.standardDeviation
+                text: qsTr("Standard deviation: ") + round(StandardDistribution.standardDeviation, 2)
             }
         }
     }
