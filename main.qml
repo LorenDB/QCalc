@@ -33,12 +33,12 @@ ApplicationWindow {
             event.accepted = true;
         }
 
-        ColumnLayout {
+        Column {
             anchors.fill: parent
 
-            Button {
+            ItemDelegate {
                 text: qsTr("Standard distribution")
-                Layout.fillWidth: true
+                width: parent.width
                 onClicked: {
                     if (stack.currentItem != StandardDistributionPage)
                         stack.push(standardDistributionCalc);
@@ -46,9 +46,9 @@ ApplicationWindow {
                 }
             }
 
-            Button {
+            ItemDelegate {
                 text: qsTr("License")
-                Layout.fillWidth: true
+                width: parent.width
                 onClicked: {
                     if (stack.currentItem != license)
                         stack.push(license);
